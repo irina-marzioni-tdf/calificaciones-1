@@ -1,11 +1,29 @@
-let 
-//let suma, promedio, contador = Number;
-//contador = 1;
-//suma = 0;
+let promedio, notaPractica, notaProblemas, notaTeorico: number;
+let nombre: string = " ";
 
-while (contador <= 10) {
-  nota = (Number(dato1.value + (Number(dato2.value + (Number(dato3.value)
-  suma = suma + nota;
-  contador = contador + 1;
+while (nombre !== "") {
+  nombre = prompt("Ingrese el nombre del alumno:");
+  console.log("Alumno:" + nombre);
+  notaPractica = Number(prompt("Ingrese la nota de la practica"));
+  notaProblemas = Number(prompt("Ingrese la nota de los problemas"));
+  notaTeorico = Number(prompt("Ingrese la nota de la teoria"));
+  console.log(
+    "nota de la practica es " + notaPractica,
+    "nota de los problemas es " + notaProblemas,
+    "nota de la teoria es " + notaTeorico
+  );
+
+  if (
+    notaPractica >= 0 &&
+    notaPractica <= 10 &&
+    notaProblemas >= 0 &&
+    notaProblemas <= 10 &&
+    notaTeorico >= 0 &&
+    notaTeorico <= 10
+  ) {
+    promedio = notaPractica * 0.1 + notaProblemas * 0.5 + notaTeorico * 0.4;
+    console.log("El promedio de", nombre, "es", promedio);
+  } else {
+    console.log("ERROR: se ha ingresado un dato no valido.");
+  }
 }
-promedio = suma/10;
