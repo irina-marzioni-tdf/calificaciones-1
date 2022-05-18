@@ -1,8 +1,9 @@
 let promedio, notaPractica, notaProblemas, notaTeorico: number;
-let nombre: string = " ";
+let nombre: string = "";
+
+nombre = prompt("Ingrese el nombre del alumno:");
 
 while (nombre !== "") {
-  nombre = prompt("Ingrese el nombre del alumno:");
   console.log("Alumno:" + nombre);
   notaPractica = Number(prompt("Ingrese la nota de la practica"));
   notaProblemas = Number(prompt("Ingrese la nota de los problemas"));
@@ -26,4 +27,5 @@ while (nombre !== "") {
   } else {
     console.log("ERROR: se ha ingresado un dato no valido.");
   }
+  nombre = prompt("Ingrese el nombre del alumno:");
 }
